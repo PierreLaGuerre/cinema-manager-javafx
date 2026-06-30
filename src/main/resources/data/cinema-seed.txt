@@ -1,0 +1,31 @@
+# cinema-manager-data-v2
+# Fictional portfolio demo data. UTF-8, pipe separated.
+MOVIE|last-light|La última luz|The Last Light|Clara Montes|112|crimson
+MOVIE|silent-orbit|Órbita silenciosa|Silent Orbit|Noah Bennett|128|blue
+MOVIE|paper-city|La ciudad de papel|The Paper City|Elena Vidal|96|gold
+MOVIE|violet-hour|La hora violeta|The Violet Hour|Maya Laurent|104|violet
+MOVIE|green-tide|Marea verde|The Green Tide|Samuel Costa|118|green
+MOVIE|glass-memory|Memoria de cristal|Glass Memory|Inés Navarro|109|blue
+MOVIE|northbound|Rumbo al norte|Northbound|Arthur Reed|121|green
+MOVIE|red-echo|El eco rojo|The Red Echo|Lucía Ferrer|101|crimson
+MOVIE|midnight-map|El mapa de medianoche|The Midnight Map|Daniel Okafor|115|violet
+AUDITORIUM|1|36
+AUDITORIUM|2|52
+AUDITORIUM|3|24
+SCREENING|ll-1730|last-light|1|17:30|12
+SCREENING|ll-2030|last-light|2|20:30|41
+SCREENING|so-1815|silent-orbit|2|18:15|18
+SCREENING|so-2145|silent-orbit|2|21:45|52
+SCREENING|pc-1645|paper-city|3|16:45|7
+SCREENING|pc-1930|paper-city|1|19:30|20
+SCREENING|vh-2015|violet-hour|3|20:15|3
+SCREENING|gt-1800|green-tide|1|18:00|27
+SCREENING|gt-2115|green-tide|2|21:15|16
+SCREENING|gm-1700|glass-memory|3|17:00|5
+SCREENING|gm-1945|glass-memory|1|19:45|11
+SCREENING|nb-1615|northbound|2|16:15|8
+SCREENING|nb-2045|northbound|2|20:45|29
+SCREENING|re-1830|red-echo|1|18:30|14
+SCREENING|re-2200|red-echo|3|22:00|19
+SCREENING|mm-1745|midnight-map|3|17:45|9
+SCREENING|mm-2130|midnight-map|1|21:30|31

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="dev.pierrelaguerre.cinema.ui.CinemaController" styleClass="app-shell">
+  <children>
+  <BorderPane>
+    <top>
+        <VBox styleClass="top-area">
+            <padding><Insets top="24" right="32" bottom="20" left="32"/></padding>
+            <HBox alignment="CENTER_LEFT" spacing="14">
+                <Label text="C" styleClass="brand-mark"/>
+                <VBox spacing="1"><Label text="CINEMA" styleClass="brand"/><Label text="MANAGER" styleClass="brand-subtitle"/></VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="languageButton" onAction="#switchLanguage" styleClass="language-button" accessibleText="%language.accessible"/>
+            </HBox>
+            <Label text="%hero.title" styleClass="hero-title"/>
+            <Label text="%hero.subtitle" styleClass="hero-subtitle"/>
+            <TextField fx:id="searchField" promptText="%search.prompt" styleClass="search-field" maxWidth="540">
+                <VBox.margin><Insets top="18"/></VBox.margin>
+            </TextField>
+        </VBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.64" styleClass="content-split">
+            <items>
+                <VBox spacing="16" styleClass="catalogue-pane">
+                    <padding><Insets top="22" right="24" bottom="28" left="32"/></padding>
+                    <HBox alignment="CENTER_LEFT"><Label text="%movies.now" styleClass="section-title"/><Region HBox.hgrow="ALWAYS"/><Label fx:id="movieCount" styleClass="count-pill"/></HBox>
+                    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS" styleClass="movie-scroll">
+                        <content><FlowPane fx:id="movieGrid" hgap="18" vgap="18" prefWrapLength="650"/></content>
+                    </ScrollPane>
+                    <Label fx:id="emptyMessage" text="%movies.empty" styleClass="empty-message" visible="false" managed="false"/>
+                </VBox>
+                <VBox fx:id="detailPanel" spacing="14" styleClass="detail-panel">
+                    <padding><Insets top="30" right="32" bottom="30" left="32"/></padding>
+                    <Label text="%details.eyebrow" styleClass="eyebrow"/>
+                    <Label fx:id="detailTitle" wrapText="true" styleClass="detail-title"/>
+                    <Label fx:id="detailMeta" wrapText="true" styleClass="detail-meta"/>
+                    <Separator/>
+                    <Label text="%screenings.title" styleClass="section-title"/>
+                    <VBox fx:id="screeningList" spacing="10" VBox.vgrow="ALWAYS"/>
+                    <Label text="%local.notice" wrapText="true" styleClass="local-notice"/>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+  </BorderPane>
+  <StackPane fx:id="purchaseOverlay" visible="false" managed="false" styleClass="purchase-overlay">
+    <VBox maxWidth="420" spacing="18" styleClass="purchase-sheet">
+      <padding><Insets top="28" right="28" bottom="28" left="28"/></padding>
+      <HBox alignment="CENTER_LEFT"><Label text="%purchase.title" styleClass="eyebrow"/><Region HBox.hgrow="ALWAYS"/><Button text="×" onAction="#closePurchase" styleClass="close-button" accessibleText="%purchase.cancel"/></HBox>
+      <Label fx:id="purchaseMovieTitle" wrapText="true" styleClass="purchase-movie-title"/>
+      <Label fx:id="purchaseSessionDetail" styleClass="detail-meta"/>
+      <Separator/>
+      <Label text="%purchase.quantity" styleClass="field-label"/>
+      <Spinner fx:id="ticketQuantity" editable="false" maxWidth="Infinity" styleClass="ticket-spinner"/>
+      <Label fx:id="purchaseAvailability" styleClass="availability"/>
+      <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="%purchase.cancel" onAction="#closePurchase" styleClass="secondary-button"/>
+        <Button text="%purchase.confirm" onAction="#confirmPurchase" styleClass="buy-button"/>
+      </HBox>
+    </VBox>
+  </StackPane>
+  <StackPane fx:id="confirmationOverlay" visible="false" managed="false" styleClass="purchase-overlay">
+    <VBox maxWidth="440" spacing="16" styleClass="purchase-sheet">
+      <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+      <Label text="✓" styleClass="confirmation-mark"/>
+      <Label text="%confirmation.title" wrapText="true" styleClass="purchase-movie-title"/>
+      <Label text="%confirmation.subtitle" wrapText="true" styleClass="detail-meta"/>
+      <VBox spacing="10" styleClass="confirmation-summary">
+        <Label fx:id="confirmationMovie" wrapText="true" styleClass="summary-primary"/>
+        <Label fx:id="confirmationSchedule" styleClass="summary-line"/>
+        <Label fx:id="confirmationRoom" styleClass="summary-line"/>
+        <Label fx:id="confirmationTickets" styleClass="summary-line"/>
+      </VBox>
+      <Button text="%confirmation.done" onAction="#closeConfirmation" maxWidth="Infinity" styleClass="buy-button"/>
+    </VBox>
+  </StackPane>
+  <Label fx:id="toastMessage" visible="false" managed="false" mouseTransparent="true" styleClass="toast-message" StackPane.alignment="BOTTOM_CENTER">
+    <StackPane.margin><Insets bottom="24"/></StackPane.margin>
+  </Label>
+  </children>
+</StackPane>

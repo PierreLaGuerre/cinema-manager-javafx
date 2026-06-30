@@ -1,0 +1,10 @@
+target/
+.mvn/apache-maven-*/
+.idea/
+.vscode/
+*.iml
+*.log
+.DS_Store
+cinema-data.txt
+dist/
+!.github/
