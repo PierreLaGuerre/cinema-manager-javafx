@@ -1,0 +1,20 @@
+Película: Anora
+  Sala: 2 - Hora: 18:0 - Entradas vendidas: 0
+
+Película: Emilia Perez
+  Sala: 2 - Hora: 20:15 - Entradas vendidas: 0
+  Sala: 3 - Hora: 20:15 - Entradas vendidas: 0
+  Sala: 4 - Hora: 20:15 - Entradas vendidas: 0
+
+Película: La historia de Souleymane
+  Sala: 2 - Hora: 16:20 - Entradas vendidas: 0
+  Sala: 3 - Hora: 16:20 - Entradas vendidas: 0
+
+Película: La semilla de la higuera sagrada
+  Sala: 1 - Hora: 16:20 - Entradas vendidas: 0
+  Sala: 1 - Hora: 20:15 - Entradas vendidas: 0
+
+Película: Simon de la montaña
+  Sala: 5 - Hora: 17:30 - Entradas vendidas: 0
+  Sala: 5 - Hora: 20:15 - Entradas vendidas: 0
+

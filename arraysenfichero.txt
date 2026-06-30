@@ -1,0 +1,40 @@
+SESION-Anora-2-18:0-0
+SESION-Emilia Perez-2-20:15-0
+SESION-Emilia Perez-3-20:15-0
+SESION-Emilia Perez-4-20:15-0
+SESION-La historia de Souleymane-2-16:20-0
+SESION-La historia de Souleymane-3-16:20-0
+SESION-La semilla de la higuera sagrada-1-16:20-0
+SESION-La semilla de la higuera sagrada-1-20:15-0
+SESION-Simon de la montaña-5-17:30-0
+SESION-Simon de la montaña-5-20:15-0
+PELICULA-Anora-Sean Baker-138
+PELICULA-Emilia Perez-Jacques Audiard-132
+PELICULA-La historia de Souleymane-Boris Lojkine-92
+PELICULA-La semilla de la higuera sagrada-Mohammad Rasoulof-168
+PELICULA-Simon de la montaña-Federico Luis-98
+SALA-1-30
+SALA-2-20
+SALA-3-40
+SALA-4-15
+SALA-5-50
+SALA-1-30
+SALA-2-20
+SALA-3-40
+SALA-4-15
+SALA-5-50
+SALA-1-30
+SALA-2-20
+SALA-3-40
+SALA-4-15
+SALA-5-50
+SALA-1-30
+SALA-2-20
+SALA-3-40
+SALA-4-15
+SALA-5-50
+SALA-1-30
+SALA-2-20
+SALA-3-40
+SALA-4-15
+SALA-5-50
