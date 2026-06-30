@@ -1,0 +1,27 @@
+name: Windows release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  package:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Build and test
+        run: .\mvnw.cmd --batch-mode clean verify
+      - name: Create self-contained application
+        shell: pwsh
+        run: |
+          jpackage --type app-image --name "Cinema Manager" --dest dist --module-path "target\cinema-manager-1.0.0.jar;target\lib" --module "dev.pierrelaguerre.cinema/dev.pierrelaguerre.cinema.Launcher" --app-version "1.0.0" --vendor "Pierre La Guerre" --description "Bilingual JavaFX cinema programme"
+          Compress-Archive -Path "dist\Cinema Manager" -DestinationPath "dist\Cinema-Manager-Windows-x64.zip"
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: dist/Cinema-Manager-Windows-x64.zip
